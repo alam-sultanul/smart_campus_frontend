@@ -1,103 +1,61 @@
 <nav class="navbar navbar-dark bg-dark">
-    <a href="" class="navbar-brand text-white"> SMARTCAMPUS</a>
-    <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+  <a href="" class="navbar-brand text-white"> SMARTCAMPUS</a>
+  
+  
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
 
 </nav>
-<!--  
-<div class="card m-5" style="width: 18rem " *ngIf="userDetails">
-    <ul class="list-group">
-        <h1> ITS HOME </h1>
-      <li class="list-group-item"><strong>UserName : </strong>{{userDetails.UserName}}</li>
-        <li class="list-group-item"><strong>Email : </strong>{{userDetails.Email}}</li>
-        <li class="list-group-item"><strong>UserName : </strong>{{userDetails.FullName}}</li>
-    </ul> 
-</div>
--->
-
-
-
-
-
-
-<!--
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
-      </div>
-    </div>
-  </nav>
--->
 
 <div class="d-flex" id="wrapper">
 
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-       
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
 
-        <!-- <div class="sidebar-heading">SmartCAMPUS </div>-->
 
-        <div class="sidebar-heading"><i class="bi bi-person-circle" *ngIf="userDetails"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                </svg></i> System Admin <li class="list-group-item"><strong>UserName : </strong>{{userDetails.UserName}}
-            </li>
-        </div>
-        <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Lead Managment</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light"><i class="bi bi-record"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-record" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
-                    </svg></i>
-                    Lead Listing</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light"><i class="bi bi-people-fill"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-people-fill" viewBox="0 0 16 16">
-                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        <path fill-rule="evenodd"
-                            d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
-                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                    </svg></i>User Managment</a>
-                    
+    <!-- <div class="sidebar-heading">SmartCAMPUS </div>-->
 
-        </div>
-        
+    <div class="sidebar-heading"><i class="bi bi-person-circle" *ngIf="userDetails"><svg
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle"
+          viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          <path fill-rule="evenodd"
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg></i> System Admin <li class="list-group-item"><strong>UserName : </strong>{{userDetails.UserName}}
+      </li>
     </div>
-    
-    <!-- /#sidebar-wrapper -->
+    <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Lead Managment</a>
+      <a href="/home/leadlist" class="list-group-item list-group-item-action bg-light"><i class="bi bi-record"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-record"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1A5 5 0 1 0 8 3a5 5 0 0 0 0 10z" />
+          </svg></i>
+        Lead Listing</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light"><i class="bi bi-people-fill"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill"
+            viewBox="0 0 16 16">
+            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            <path fill-rule="evenodd"
+              d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+          </svg></i>User Managment</a>
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
 
-   
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-                <ul class="navbar-nav">
-                   <li class="nav-item">
-                       <button routerLink="/home/leadlist" class="m-1 btn btn-light btn-outline-primary" Button>Lead Listing</button>
-                   </li>
-            
-                  
-                </ul> 
-               </nav>
-        
-        </div>
     </div>
-    <!-- /#page-content-wrapper -->
-    <router-outlet></router-outlet>
+
+  </div>
+
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+
+
+  </div>
+  <!-- /#page-content-wrapper -->
+  <router-outlet></router-outlet>
 
 </div>

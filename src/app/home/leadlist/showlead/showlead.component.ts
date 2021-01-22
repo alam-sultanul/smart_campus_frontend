@@ -34,6 +34,7 @@ export class ShowleadComponent implements OnInit {
 
   addClick()
   {
+    alert("modal add button");
     this.pro={
       ProfileId:0,
       ProfileName:"",
@@ -74,7 +75,7 @@ export class ShowleadComponent implements OnInit {
   {
     if(confirm('Are you sure Delete '+item.ProfileName+' profile'))
     {
-      this.service.deleteLeadListPProfile(item.ProfileId).subscribe(data=>{alert(data.toString())
+      this.service.deleteLeadListProfile(item.ProfileId).subscribe(data=>{alert(data.toString())
       this.refreshProfileList();
 
     });

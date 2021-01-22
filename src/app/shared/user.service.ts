@@ -79,11 +79,11 @@ export class UserService {
     return this.http.post(this.BaseURI+'/leadlist',val);
   }
 
-  updateLeadListPProfile(val:any){
+  updateLeadListProfile(val:any){
     return this.http.put(this.BaseURI+'/leadlist',val);
   }
  
-  deleteLeadListPProfile(val:any){
+  deleteLeadListProfile(val:any){
     return this.http.delete(this.BaseURI+'/leadlist/'+val);
   }
 
