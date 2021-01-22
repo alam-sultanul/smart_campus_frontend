@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       res=>{
         this.userDetails=res;
         console.log("response:"+res);
-        console.log("response:"+res['Email']);       
+       // console.log("response:"+res['Email']);       
         console.log("token:"+localStorage.getItem('token'));
 
       },

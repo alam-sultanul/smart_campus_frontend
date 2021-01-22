@@ -23,7 +23,7 @@ const routes: Routes =
 
     //{ path: 'home', component: HomeComponent ,canActivate:[AuthGuard]}
     {
-      path: 'home', component: HomeComponent,
+      path: 'home', component: HomeComponent,canActivate:[AuthGuard],
       children:
         [
           { path: 'leadlist', component: LeadlistComponent }

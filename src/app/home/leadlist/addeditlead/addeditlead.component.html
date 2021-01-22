@@ -1,1 +1,98 @@
 <p>addeditlead works!</p>
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="from-froup row" style="width: 100%;">
+        <label class="col-sm-3 col-form-label">Profile Name</label>
+        <div class="col-sm-7">
+            
+            <input type="text" class="form-control" [(ngModel)]="ProfileName" placeholder="Enter Profile Name">
+
+        </div>
+
+        <label class="col-sm-3 col-form-label">Origin type</label>
+
+        <div class="col-sm-7">
+            
+            <select class="form-control" [(ngModel)]="OriginType" placeholder="Select Origin"> 
+               <!-- <option>Select Department Name</option>-->
+            <option>
+                   Local
+            </option>
+            <option>
+                    International
+            </option>
+          
+            </select>
+        </div>
+
+        <label class="col-sm-3 col-form-label">Email Address</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" [(ngModel)]="EmailAddress" placeholder="Enter Email Address">
+
+        </div>
+
+        <label class="col-sm-3 col-form-label">Contact Number</label>
+        <div class="col-sm-7">
+            <input type="number" class="form-control" [(ngModel)]="ContactNumber" placeholder="Enter Contact Number">
+
+        </div>
+
+        <label class="col-sm-3 col-form-label">Nationality</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" [(ngModel)]="Nationality" placeholder="Enter Nationality">
+
+        </div>
+
+        <label class="col-sm-3 col-form-label">Lead Scoring</label>
+        <div class="col-sm-7">
+            <select class="form-control" [(ngModel)]="LeadScoring" placeholder="Select Lead Scoring"> 
+               <!-- <option>Select Department Name</option>-->
+            <option>
+                   New
+            </option>
+            <option>
+                    Hot
+            </option>
+            <option>
+                Warm
+        </option>
+          
+            </select>
+        </div>
+
+        <label class="col-sm-3 col-form-label">Lead Status</label>
+        <div class="col-sm-7">
+            <input type="number" class="form-control" [(ngModel)]="LeadStatus" placeholder="">
+
+        </div>
+
+        <label class="col-sm-3 col-form-label">Type</label>
+        <div class="col-sm-7">
+            <select class="form-control" [(ngModel)]="ProfileType" placeholder="Select Type"> 
+               <!-- <option>Select Department Name</option>-->
+            <option>
+                   Local
+            </option>
+            <option>
+                    Applicant
+            </option>
+            </select>
+        </div>
+
+        <label class="col-sm-3 col-form-label">Date</label>
+
+        <div class="col-sm-5">
+            <input type="date" [(ngModel)]="RegistrationDate">
+        </div>
+
+    </div>
+   
+</div>
+
+<button (click)="addProfile()" *ngIf="pro.ProfileId==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateProfile()" *ngIf="pro.ProfileId!=0" class="btn btn-primary">
+    Update
+</button>

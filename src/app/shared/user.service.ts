@@ -69,6 +69,7 @@ export class UserService {
 
 
   // for LeadListing
+ 
 
   getLeadListProfileList():Observable<any[]>{
     return this.http.get<any>(this.BaseURI+'/leadlist');
