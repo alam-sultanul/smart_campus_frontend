@@ -1,1 +1,225 @@
-<p>showlead works!</p>
+
+<div class="container-fluid">
+    <h3>Lead Listing</h3>
+    <h5 class="d-flex justify-content-center"> Manage Leads</h5>
+</div>
+
+
+
+<div class="container-fluid">
+    <button type="button" class="btn btn-primary btn-sm float-right m-1"><svg xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg> Advance Search</button>
+
+    <button type="button" class="btn btn-outline-success btn-sm float-right m-1" (click)="refreshClick()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-bootstrap-reboot" viewBox="0 1.5 16 16">
+            <path
+                d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 0 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.812 6.812 0 0 0 1.16 8z" />
+            <path
+                d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352h1.141zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324h-1.6z" />
+        </svg> Refresh</button>
+
+    <button type="button" class="btn btn-outline-secondary btn-sm float-right m-1"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
+            viewBox="0 0 16 16">
+            <path
+                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+            <path
+                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+        </svg> Download</button>
+
+    <button type="button" class="btn btn-primary btn-sm float-right m-1" data-toggle="modal" data-target="#exampleModal"
+        (click)="addClick()" data-backdrop="static" data-keyboard="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" fill="currentColor"
+            class="bi bi-plus-square-fill" viewBox="2 1 15 16">
+            <path
+                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+        </svg> Add New
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
+                    <!--   <h5 class="modal-title" id="exampleModalLabel">Modal 1</h5> -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeClick()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <app-add-edit-delete-lead [pro]="pro" *ngIf="ActivateAddEditDeleteComp"></app-add-edit-delete-lead>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--
+<div class="col-sm-3 col-form-label">
+    <select class="form-control" placeholder="Select Origin">
+       
+        <option>
+            Local
+        </option>
+        <option>
+            International
+        </option>
+
+    </select>
+</div>
+-->
+
+<div class="container-fluid">
+    <font face="Comic sans MS">
+    <div class="from-froup row" style="width: 65%;">
+
+        <div class="col-sm-2">
+
+            <select class="form-control" placeholder="Select Origin" style="height: 28px; width: 90px; font-size:10px;">
+                <!-- <option>Select Department Name</option>-->
+                <option>
+                    Local
+                </option>
+                <option>
+                    International
+                </option>
+
+            </select>
+        </div>
+
+
+
+        <div class="col-sm-2">
+            <select class="form-control" placeholder="Select Lead Scoring" style="height: 28px; width: 90px; font-size:10px;">
+                <!-- <option>Select Department Name</option>-->
+                <option>
+                    New
+                </option>
+                <option>
+                    Hot
+                </option>
+                <option>
+                    Warm
+                </option>
+
+            </select>
+        </div>
+
+
+        <div class="col-sm-2">
+            <select class="form-control" placeholder="Select Type" style="height: 28px; width: 90px; font-size:10px;">
+
+                <option>
+                    Active
+                </option>
+                <option>
+                    Inactive
+                </option>
+            </select>
+        </div>
+
+        <div class="col-sm-2">
+            <select class="form-control" placeholder="Select Type" style="height: 28px; width: 90px; font-size:10px;">
+
+                <option>
+                    Local
+                </option>
+                <option>
+                    Applicant
+                </option>
+            </select>
+        </div>
+        <div class="col-sm-2">
+            <input type="date" style="height: 28px; width: 110px; font-size:12px;">
+        </div>
+        <div class="col-sm-2">
+            <input type="date" style="height: 28px; width: 110px; font-size:12px;">
+        </div>
+
+    </div>
+</font>
+
+</div>
+
+
+
+
+<div class="container-fluid">
+    <font size="1.0" face="Comic sans MS">
+        <table class="table table-striped table-bordered display nowrap" style="width:100%">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Full Name</th>
+                    <th>Origin type</th>
+                    <th>Email Address</th>
+                    <th>Contact Number</th>
+                    <th>Nationality</th>
+                    <th>Lead Scoring</th>
+                    <th>Lead Status</th>
+                    <th>Type</th>
+                    <th>Registration Date</th>
+                    <th>Option</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dataItem of ProfileList">
+                    <td>{{dataItem.ProfileId}}</td>
+                    <td>{{dataItem.ProfileName}}</td>
+                    <td>{{dataItem.OriginType}}</td>
+                    <td>{{dataItem.EmailAddress}}</td>
+                    <td>{{dataItem.ContactNumber}}</td>
+                    <td>{{dataItem.Nationality}}</td>
+                    <td style="color: #0000ff;">{{dataItem.LeadScoring}}</td>
+                    <td>{{dataItem.LeadStatus}}</td>
+                    <td>{{dataItem.ProfileType}}</td>
+                    <td>{{dataItem.RegistrationDate}}</td>
+                    <td>
+
+
+                        <button type="button" class="btn btn-light mr-1" data-toggle="modal" data-target="#exampleModal"
+                            (click)="editClick(dataItem)" data-backdrop="static" data-keyboard="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" fill="blue"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                        </button>
+
+                        <button type="button" class="btn btn-light mr-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" fill="green"
+                                class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                            </svg>
+                        </button>
+
+
+                        <!--   (click)="editClick(dataItem)"   <button type="button" class="btn btn-light mr-1" (click)="deleteClick(dataItem)"> -->
+                        <button type="button" class="btn btn-light mr-1" (click)="deleteClick(dataItem)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" fill="red"
+                                class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                            </svg>
+                        </button>
+
+                    </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </font>
+</div>
