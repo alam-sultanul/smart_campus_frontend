@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/user.service';
+import { ToastrService } from 'ngx-toastr';
+
+
+
 
 @Component({
   selector: 'app-showlead',
@@ -11,7 +15,7 @@ export class ShowleadComponent implements OnInit {
 
 
 
-  constructor(private service: UserService) { }
+  constructor(private service: UserService,private toastr:ToastrService) { }
 
   ProfileList: any = [];
   ActivateAddEditDeleteComp: boolean = false;
@@ -135,8 +139,9 @@ reverse:boolean = false;
   deleteClick(item: any) {
     if (confirm('Are you sure Delete ' + item.ProfileName + ' profile')) {
       this.service.deleteLeadListProfile(item.ProfileId).subscribe(data => {
-        alert(data.toString())
+       // alert(data.toString())
         this.refreshProfileList();
+        this.toastr.success('now Deleted', 'Profile Delete successfuly.');
 
       });
 

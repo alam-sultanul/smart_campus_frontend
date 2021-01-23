@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-addeditlead',
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/shared/user.service';
 })
 export class AddeditleadComponent implements OnInit {
 
-  constructor(private service:UserService) { }
+  constructor(private service:UserService,private toastr:ToastrService) { }
 
   //ActivateAddEditDeleteComp:boolean=false;
   
@@ -61,7 +62,8 @@ export class AddeditleadComponent implements OnInit {
       RegistrationDate:this.RegistrationDate
     };
 this.service.addLeadListProfile(val).subscribe(res=>{
-alert(res.toString());
+//alert(res.toString());
+this.toastr.success('New profile created!', 'Profile Save successful.');
 });
 
   }
@@ -81,7 +83,8 @@ alert(res.toString());
       RegistrationDate:this.RegistrationDate
     };
 this.service.updateLeadListProfile(val).subscribe(res=>{
-alert(res.toString());
+//alert(res.toString());
+this.toastr.success('now Updated!', 'Profile Update successfuly.');
 });
 
   }
