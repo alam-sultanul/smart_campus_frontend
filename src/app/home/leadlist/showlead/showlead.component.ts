@@ -97,7 +97,7 @@ reverse:boolean = false;
   }
 
   addClick() {
-    alert("modal add button");
+    //alert("modal add button");
     this.pro = {
       ProfileId: 0,
       ProfileName: "",
@@ -117,10 +117,10 @@ reverse:boolean = false;
   }
 
   editClick(dataItem: any) {
-    alert("Edit Profile Name : " + dataItem.ProfileName);
+    //alert("Edit Profile Name : " + dataItem.ProfileName);
     console.log(dataItem);
     this.pro = dataItem;
-    alert("Pro Name : " + dataItem.ProfileId);
+   // alert("Pro Name : " + dataItem.ProfileId);
     this.ModalTitle = "Edit Profile";
     this.ActivateAddEditDeleteComp = true;
 
@@ -145,7 +145,7 @@ reverse:boolean = false;
   }
 
   refreshClick() {
-    alert('refresh');
+    //alert('refresh');
     this.refreshProfileList();
   }
 

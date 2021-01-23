@@ -48,7 +48,7 @@ export class AddeditleadComponent implements OnInit {
 
   addProfile()
   {
-    alert("profile name"+this.ProfileName);
+  //  alert("profile name"+this.ProfileName);
     var val = {ProfileId:this.ProfileId,
       ProfileName:this.ProfileName,
       OriginType:this.OriginType,

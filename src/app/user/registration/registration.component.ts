@@ -27,14 +27,14 @@ export class RegistrationComponent implements OnInit {
 
     this.service.register().subscribe(
       (res: any) => {
-        if (res.succeeded) {
+        if (res.Succeeded) {
 
           this.service.formModel.reset();
           this.toastr.success('New user created!', 'Registration successful.');
 
         }
         else {
-          res.errors.forEach(element => {
+          res.Errors.forEach(element => {
             switch (element.code) {
               case 'DuplicateUserName':
                 this.toastr.error('Username is already taken', 'Registration Failed');
