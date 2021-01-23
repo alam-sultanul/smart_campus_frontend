@@ -19,6 +19,9 @@ import { HomeComponent } from './home/home.component';
 import { LeadlistComponent } from './home/leadlist/leadlist.component';
 import { ShowleadComponent } from './home/leadlist/showlead/showlead.component';
 import { AddeditleadComponent } from './home/leadlist/addeditlead/addeditlead.component';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import {NgxPaginationModule} from 'ngx-pagination';
+  import { from } from 'rxjs';
 
 //import { LeadListingComponent } from './user/lead-listing/lead-listing.component';
 
@@ -44,7 +47,9 @@ import { AddeditleadComponent } from './home/leadlist/addeditlead/addeditlead.co
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    FormsModule
+    FormsModule,
+    Ng2OrderModule,
+    NgxPaginationModule
 
   ],
   providers: [UserService],

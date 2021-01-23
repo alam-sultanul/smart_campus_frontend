@@ -22,7 +22,7 @@ export class ShowleadComponent implements OnInit {
 
   pro: any;
 
-
+p:number=1;
 
   //for filtering
   profileNameFilter: string = "";
@@ -73,6 +73,15 @@ export class ShowleadComponent implements OnInit {
     });
 
 
+
+  }
+
+  key:string ="id";
+reverse:boolean = false;
+  sort(key)
+  {
+    this.key =key;
+    this.reverse= !this.reverse;
 
   }
 
