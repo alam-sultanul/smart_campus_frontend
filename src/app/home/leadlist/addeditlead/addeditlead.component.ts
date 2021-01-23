@@ -20,7 +20,7 @@ export class AddeditleadComponent implements OnInit {
   ContactNumber!:number;
   Nationality!:string;
   LeadScoring!:string;
-  LeadStatus!:number;
+  LeadStatus!:string;
   ProfileType!:string;
   RegistrationDate!:Date;
  

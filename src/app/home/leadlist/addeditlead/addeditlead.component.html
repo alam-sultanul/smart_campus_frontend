@@ -1,4 +1,4 @@
-<p>addeditlead works!</p>
+
 <div class="d-flex flex-row bd-highlight mb-3">
 
     <div class="from-froup row" style="width: 100%;">
@@ -27,13 +27,13 @@
 
         <label class="col-sm-3 col-form-label">Email Address</label>
         <div class="col-sm-7">
-            <input type="text" class="form-control" [(ngModel)]="EmailAddress" placeholder="Enter Email Address">
+            <input type="text" class="form-control" [(ngModel)]="EmailAddress" placeholder="test@gmail.com">
 
         </div>
 
         <label class="col-sm-3 col-form-label">Contact Number</label>
         <div class="col-sm-7">
-            <input type="number" class="form-control" [(ngModel)]="ContactNumber" placeholder="Enter Contact Number">
+            <input type="number" class="form-control" [(ngModel)]="ContactNumber" placeholder="Enter Contact Number" required>
 
         </div>
 
@@ -62,8 +62,15 @@
 
         <label class="col-sm-3 col-form-label">Lead Status</label>
         <div class="col-sm-7">
-            <input type="number" class="form-control" [(ngModel)]="LeadStatus" placeholder="">
-
+            <select class="form-control" [(ngModel)]="LeadStatus" placeholder="Select Type"> 
+               <!-- <option>Select Department Name</option>-->
+            <option>
+                   Active
+            </option>
+            <option>
+                    Inactive
+            </option>
+            </select>
         </div>
 
         <label class="col-sm-3 col-form-label">Type</label>

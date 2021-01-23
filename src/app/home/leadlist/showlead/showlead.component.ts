@@ -28,7 +28,8 @@ p:number=1;
   profileNameFilter: string = "";
   originTypeFilter: string = "";
   leadScoringFilter: string = "";
-  registrationDatefilter:any;
+  leadStatusFilter: string = "";
+  //registrationDatefilter:any;
   leadlistingListWithOutFilter: any = [];
 
 
@@ -55,6 +56,8 @@ p:number=1;
     var profileNameFilter=this.profileNameFilter;
     var originTypeFilter=this.originTypeFilter;
     var leadScoringFilter=this.leadScoringFilter;
+    var leadStatusFilter=this.leadStatusFilter;
+  
     
 
     this.ProfileList=this.leadlistingListWithOutFilter.filter(function(el){
@@ -67,7 +70,10 @@ p:number=1;
        
         )&&
         el.LeadScoring.toString().toLowerCase().includes(
-        leadScoringFilter.toString().trim(). toLowerCase() 
+        leadScoringFilter.toString().trim().toLowerCase() 
+        )&&
+        el.LeadStatus.toString().toLowerCase().includes(
+          leadStatusFilter.toString().trim().toLowerCase() 
         )
 
     });
